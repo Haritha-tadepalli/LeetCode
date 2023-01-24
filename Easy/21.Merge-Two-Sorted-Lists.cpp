@@ -2,6 +2,7 @@
  //Question Link: https://leetcode.com/problems/merge-two-sorted-lists/
  //Solution: https://leetcode.com/submissions/detail/845006341/git 
 
+/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -14,13 +15,23 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* head = new ListNode;
+        ListNode *temp = head;
         while(list1 && list2){
-            if(list1->val < list2->val)
+            if(list1->val < list2->val){
+                temp->next = new ListNode(list1->val);
                 list1 = list1->next;
-            else{
-                ListNode *temp = list1->next;
-                list1
             }
+            else{
+                temp->next = new ListNode(list2->val);
+                list2 = list2->next;
+            }
+            temp = temp->next;
         }
+        if(list1)
+            temp->next = list1;
+        if(list2)
+            temp->next = list2;
+        return head->next;
     }
 };
