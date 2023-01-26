@@ -1,6 +1,6 @@
 /*
 Question: https://leetcode.com/problems/sqrtx/
-Solution:
+Solution: https://leetcode.com/problems/sqrtx/submissions/845140946/
 */
 
 #include<bits/stdc++.h>
