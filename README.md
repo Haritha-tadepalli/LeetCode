@@ -3,3 +3,5 @@ Topics Covered:
 # Dynamic Programming
 # Binary Search
 # Trees
+# Breadth-First-Search
+# Depth-First-Search
